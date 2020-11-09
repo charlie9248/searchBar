@@ -1,0 +1,29 @@
+
+
+
+
+<div class="row"> 
+<div class="col-10 mx-auto col-lg-6 col-md-6">
+  <input class="form-control m-3" type="text" [(ngModel)]="firstname" (input)=searchByFirstName($event) name="firstname" placeholder="search by firstname" id="firstname">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Firstname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">Department</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let employee of employees">
+      <tr>
+        <td>{{employee.firstname}}</td>
+        <td>{{employee.lastname}}</td>
+        <td>{{employee.department}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="col-10 mx-auto col-lg-6 col-md-6">
+  <app-filtered-employees [filteredEmployees]="filteredEmployees"  [valueWatcher]="valueWatcher"></app-filtered-employees>
+</div>
+</div>

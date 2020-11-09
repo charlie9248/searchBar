@@ -1,0 +1,17 @@
+<h3 class="m-4 text-center">Filtered imployees</h3>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Firstname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">Department</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let employee of filteredEmployees">
+      <tr>
+        <td>{{employee.firstname}}</td>
+        <td>{{employee.lastname}}</td>
+        <td>{{employee.department}}</td>
+      </tr>
+    </tbody>
+  </table>
